@@ -26,7 +26,8 @@ public class TenantContextHolder {
      * @return 租户编号
      */
     public static Long getTenantId() {
-        return TENANT_ID.get();
+        // todo 访问兼容，忽略租户 id
+        return TENANT_ID.get() == null ? 1L : TENANT_ID.get();
     }
 
     /**

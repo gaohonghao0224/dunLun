@@ -253,6 +253,9 @@ public class PermissionServiceImpl implements PermissionService {
      */
     @VisibleForTesting
     List<RoleDO> getEnableUserRoleListByUserIdFromCache(Long userId) {
+        // todo  访问兼容，忽略用户 id
+        if (userId == null ) userId = 1L;
+
         // 获得用户拥有的角色编号
         Set<Long> roleIds = getSelf().getUserRoleIdListByUserIdFromCache(userId);
         // 获得角色数组，并移除被禁用的
