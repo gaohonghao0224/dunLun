@@ -15,5 +15,5 @@ public interface OrderApi {
      * @param id 订单 ID
      * @return 订单 DTO
      */
-    public OrderDTO getOrderById(Long id);
+     OrderDTO getOrderById(Long id);
 }
